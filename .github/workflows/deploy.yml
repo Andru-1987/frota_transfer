@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+# Esta línea fuerza a los plugins a usar el motor más nuevo y elimina el warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
 
