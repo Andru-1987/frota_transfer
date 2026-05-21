@@ -1,0 +1,8 @@
+{
+  "name": "Frota Transfer",
+  "description": "Private transfer service in Brazil. Book with certainty, track in real-time. Anticipated booking, assigned drivers, and split payments.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
