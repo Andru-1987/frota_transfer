@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, CheckCircle2, Users, Briefcase, Smartphone } from 'lucide-react';
 import { VehicleCategory, VEHICLE_CATEGORIES } from '../types';
 
 const BookingFlow = () => {
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const [data, setData] = useState({
     from: '',
@@ -45,27 +47,27 @@ const BookingFlow = () => {
               exit={{ opacity: 0, x: -20 }}
               className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100"
             >
-              <h2 className="text-3xl font-sans font-black mb-8 text-slate-900">Planificá tu <span className="text-primary">Transfer</span></h2>
+              <h2 className="text-3xl font-sans font-black mb-8 text-slate-900">{t('booking.planYourTrip')} <span className="text-primary">{t('booking.planYourTripHighlight')}</span></h2>
               <div className="space-y-6">
                 <div>
-                  <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">ORIGEN (Aeropuerto, Hotel, Puerto, etc.)</label>
+                  <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">{t('booking.step1.origin')}</label>
                   <div className="relative">
                     <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                     <input 
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 pl-12 pr-4 focus:border-primary/40 focus:bg-white outline-none transition-colors text-slate-900" 
-                      placeholder="Ej: Aeropuerto Galeão (GIG)"
+                      placeholder={t('booking.step1.originPlaceholder')}
                       value={data.from}
                       onChange={e => setData({...data, from: e.target.value})}
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">DESTINO (Cualquier punto B)</label>
+                  <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">{t('booking.step1.destination')}</label>
                   <div className="relative">
                     <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" size={18} />
                     <input 
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 pl-12 pr-4 focus:border-primary/40 focus:bg-white outline-none transition-colors text-slate-900" 
-                      placeholder="Ej: Hotel Copacabana Palace"
+                      placeholder={t('booking.step1.destinationPlaceholder')}
                       value={data.to}
                       onChange={e => setData({...data, to: e.target.value})}
                     />
@@ -73,7 +75,7 @@ const BookingFlow = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">FECHA</label>
+                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">{t('booking.step1.date')}</label>
                     <input 
                       type="date"
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 focus:border-primary/40 focus:bg-white outline-none transition-colors text-slate-900" 
@@ -82,7 +84,7 @@ const BookingFlow = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">HORA</label>
+                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">{t('booking.step1.time')}</label>
                     <input 
                       type="time"
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 focus:border-primary/40 focus:bg-white outline-none transition-colors text-slate-900" 
@@ -93,7 +95,7 @@ const BookingFlow = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">PASAJEROS</label>
+                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">{t('booking.step1.passengers')}</label>
                     <div className="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-2">
                        <button onClick={() => setData({...data, pax: Math.max(1, data.pax - 1)})} className="w-10 h-10 flex items-center justify-center text-primary hover:bg-slate-100 rounded-lg">-</button>
                        <span className="flex-1 text-center font-bold text-slate-900">{data.pax}</span>
@@ -101,7 +103,7 @@ const BookingFlow = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">EQUIPAJE</label>
+                    <label className="text-[10px] text-slate-400 font-bold tracking-widest block mb-2 uppercase">{t('booking.step1.baggage')}</label>
                     <div className="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-2">
                        <button onClick={() => setData({...data, bags: Math.max(0, data.bags - 1)})} className="w-10 h-10 flex items-center justify-center text-primary hover:bg-slate-100 rounded-lg">-</button>
                        <span className="flex-1 text-center font-bold text-slate-900">{data.bags}</span>
@@ -114,7 +116,7 @@ const BookingFlow = () => {
                   onClick={nextStep}
                   className="w-full brand-gradient text-white font-bold py-5 rounded-xl mt-4 disabled:opacity-30 disabled:grayscale transition-all shadow-lg shadow-primary/20"
                 >
-                  SIGUIENTE: ELEGIR VEHÍCULO
+                  {t('booking.step1.nextButton')}
                 </button>
               </div>
             </motion.div>
@@ -128,8 +130,8 @@ const BookingFlow = () => {
               exit={{ opacity: 0, x: -20 }}
               className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100"
             >
-              <button onClick={prevStep} className="text-primary text-xs font-bold tracking-widest mb-6 uppercase">VOLVER</button>
-              <h2 className="text-3xl font-sans font-black mb-8 text-slate-900">Elegí tu <span className="text-primary">Categoría</span></h2>
+              <button onClick={prevStep} className="text-primary text-xs font-bold tracking-widest mb-6 uppercase">{t('booking.step2.back')}</button>
+              <h2 className="text-3xl font-sans font-black mb-8 text-slate-900">{t('booking.step2.chooseCategory')} <span className="text-primary">{t('booking.step2.chooseCategoryHighlight')}</span></h2>
               <div className="space-y-4 mb-8">
                 {VEHICLE_CATEGORIES.map((v: VehicleCategory) => (
                   <div 
@@ -159,7 +161,7 @@ const BookingFlow = () => {
                 onClick={nextStep}
                 className="w-full brand-gradient text-white font-bold py-5 rounded-xl shadow-lg shadow-primary/20"
               >
-                SIGUIENTE: PAGO Y CONFIRMACIÓN
+                {t('booking.step2.nextButton')}
               </button>
             </motion.div>
           )}
@@ -172,23 +174,23 @@ const BookingFlow = () => {
               exit={{ opacity: 0, x: -20 }}
               className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100"
             >
-              <button onClick={prevStep} className="text-primary text-xs font-bold tracking-widest mb-6 uppercase">VOLVER</button>
-              <h2 className="text-3xl font-sans font-black mb-8 text-slate-900">Revisá tu <span className="text-primary">Reserva</span></h2>
+              <button onClick={prevStep} className="text-primary text-xs font-bold tracking-widest mb-6 uppercase">{t('booking.step3.back')}</button>
+              <h2 className="text-3xl font-sans font-black mb-8 text-slate-900">{t('booking.step3.reviewBooking')} <span className="text-primary">{t('booking.step3.reviewBookingHighlight')}</span></h2>
               
               <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 mb-8 space-y-4">
                 <div className="flex justify-between items-start">
                   <div>
-                    <span className="text-[10px] text-primary font-bold tracking-widest block mb-1 uppercase">VIAJE</span>
+                    <span className="text-[10px] text-primary font-bold tracking-widest block mb-1 uppercase">{t('booking.step3.trip')}</span>
                     <p className="text-sm font-medium text-slate-900">{data.from} → {data.to}</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <span className="text-[10px] text-primary font-bold tracking-widest block mb-1 uppercase">FECHA</span>
+                    <span className="text-[10px] text-primary font-bold tracking-widest block mb-1 uppercase">{t('booking.step3.date')}</span>
                     <p className="text-sm text-slate-600">{data.date} · {data.time}</p>
                   </div>
                   <div>
-                    <span className="text-[10px] text-primary font-bold tracking-widest block mb-1 uppercase">VEHÍCULO</span>
+                    <span className="text-[10px] text-primary font-bold tracking-widest block mb-1 uppercase">{t('booking.step3.vehicle')}</span>
                     <p className="text-sm font-bold text-slate-900">{data.vehicle.name}</p>
                   </div>
                 </div>
@@ -196,16 +198,16 @@ const BookingFlow = () => {
 
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between text-slate-500 font-medium text-sm">
-                  <span>Precio Total</span>
+                  <span>{t('booking.step3.totalPrice')}</span>
                   <span className="text-slate-900">USD {data.vehicle.price}</span>
                 </div>
                 <div className="p-6 rounded-2xl border border-primary/20 bg-primary/5 flex justify-between items-center shadow-sm shadow-primary/5">
                   <div>
-                    <span className="text-xs font-bold text-primary block uppercase">PAGÁS AHORA (50%)</span>
+                    <span className="text-xs font-bold text-primary block uppercase">{t('booking.step3.payNow')}</span>
                     <p className="text-2xl font-black text-slate-900">USD {data.vehicle.price / 2}</p>
                   </div>
                   <div className="text-right">
-                    <span className="text-xs font-bold text-slate-400 block uppercase">SALDO EN DESTINO</span>
+                    <span className="text-xs font-bold text-slate-400 block uppercase">{t('booking.step3.balanceAtDestination')}</span>
                     <p className="text-xl font-bold text-slate-500">USD {data.vehicle.price / 2}</p>
                   </div>
                 </div>
@@ -215,11 +217,10 @@ const BookingFlow = () => {
                 onClick={() => window.location.reload()}
                 className="w-full brand-gradient text-white font-bold py-5 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-primary/20"
               >
-                <Smartphone size={20} /> CONFIRMAR Y PAGAR POR WHATSAPP
+                <Smartphone size={20} /> {t('booking.step3.confirmButton')}
               </button>
               <p className="text-[10px] text-center text-slate-400 mt-6 leading-relaxed uppercase tracking-wider">
-                Al confirmar, serás redirigido a WhatsApp para completar el pago mediante un link de MercadoPago.
-                Cancelación gratuita hasta 7 días antes.
+                {t('booking.step3.disclaimer')}
               </p>
             </motion.div>
           )}

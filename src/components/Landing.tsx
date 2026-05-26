@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import {
   ChevronRight,
@@ -21,6 +22,7 @@ const MOCK_PACKAGES = [
 ];
 
 const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
+  const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -46,7 +48,7 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
           className="mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/20 bg-gold/5 text-gold text-[10px] font-bold tracking-[0.2em]"
         >
           <Zap size={12} fill="currentColor" />
-          TRANSFER PRIVADO · BRASIL
+          {t('landing.badge')}
         </motion.div>
 
         <motion.h1
@@ -55,8 +57,8 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
           transition={{ delay: 0.1 }}
           className="text-6xl md:text-8xl font-serif font-light leading-[0.95] mb-8"
         >
-          De cualquier punto <br />
-          <span className="italic text-gold">a cualquier destino.</span>
+          {t('landing.hero.title')} <br />
+          <span className="italic text-gold">{t('landing.hero.titleHighlight')}</span>
         </motion.h1>
 
         <motion.p
@@ -65,8 +67,7 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
           transition={{ delay: 0.2 }}
           className="max-w-2xl text-cream/50 text-lg md:text-xl font-light mb-12 leading-relaxed"
         >
-          Sin sorpresas. Reserva anticipada, seguimiento en tiempo real y conductores profesionales.
-          Paga el 50% al reservar y el resto al llegar.
+          {t('landing.hero.description')}
         </motion.p>
 
         <motion.div
@@ -79,19 +80,19 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
             onClick={onStartBooking}
             className="gold-gradient text-dark font-bold px-10 py-5 rounded-xl shadow-2xl shadow-gold/20 flex items-center gap-2 hover:brightness-110 active:scale-95 transition-all"
           >
-            RESERVAR TRANSFER <ArrowRight size={20} />
+            {t('landing.hero.buttonBooking')} <ArrowRight size={20} />
           </button>
           <button className="px-10 py-5 rounded-xl border border-white/10 hover:border-gold/40 transition-colors">
-            VER PACKAGES
+            {t('landing.hero.buttonPackages')}
           </button>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-5xl">
           {[
-            { icon: <ShieldCheck className="text-gold" />, title: 'Certeza Total', desc: 'Sabés quién viene y cuándo.' },
-            { icon: <MapIcon className="text-gold" />, title: 'Real-time Tracking', desc: 'Seguí el viaje desde tu app.' },
-            { icon: <CreditCard className="text-gold" />, title: 'Pago Fraccionado', desc: '50% reserva / 50% destino.' },
-            { icon: <Smartphone className="text-gold" />, title: 'WhatsApp Centric', desc: 'Notificaciones cada paso.' },
+            { icon: <ShieldCheck className="text-gold" />, title: t('landing.features.certainty.title'), desc: t('landing.features.certainty.description') },
+            { icon: <MapIcon className="text-gold" />, title: t('landing.features.tracking.title'), desc: t('landing.features.tracking.description') },
+            { icon: <CreditCard className="text-gold" />, title: t('landing.features.payment.title'), desc: t('landing.features.payment.description') },
+            { icon: <Smartphone className="text-gold" />, title: t('landing.features.whatsapp.title'), desc: t('landing.features.whatsapp.description') },
           ].map((item, idx) => (
             <motion.div
               key={idx}
@@ -112,8 +113,8 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
       <section className="w-full max-w-7xl px-6 py-24">
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-4xl font-serif">Packages <span className="italic text-gold">Exclusivos</span></h2>
-            <p className="text-cream/40 text-sm mt-2">Experiencias curadas para tu próximo destino.</p>
+           <h2 className="text-4xl font-serif">Packages <span className="italic text-gold">{t('landing.packages.titleHighlight')}</span></h2>
+             <p className="text-cream/40 text-sm mt-2">{t('landing.packages.description')}</p>
           </div>
           <div className="flex gap-4">
             <button
