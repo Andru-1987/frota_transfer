@@ -1,0 +1,159 @@
+{
+  "landing": {
+    "badge": "TRANSFER PRIVADO · BRASIL",
+    "hero": {
+      "title": "De qualquer ponto",
+      "titleHighlight": "para qualquer destino.",
+      "description": "Sem surpresas. Reserve com antecedência, rastreamento em tempo real e motoristas profissionais.\nPague 50% ao reservar e o restante na chegada.",
+      "buttonBooking": "RESERVAR TRANSFER",
+      "buttonPackages": "VER PACOTES"
+    },
+    "features": {
+      "certainty": {
+        "title": "Certeza Total",
+        "description": "Saiba quem vem e quando."
+      },
+      "tracking": {
+        "title": "Rastreamento em Tempo Real",
+        "description": "Acompanhe sua viagem pelo app."
+      },
+      "payment": {
+        "title": "Pagamento Flexível",
+        "description": "50% adiantado / 50% no destino."
+      },
+      "whatsapp": {
+        "title": "Focado em WhatsApp",
+        "description": "Notificações em cada etapa."
+      }
+    },
+    "packages": {
+      "title": "Pacotes",
+      "titleHighlight": "Exclusivos",
+      "description": "Experiências curadas para seu próximo destino."
+    }
+  },
+  "navbar": {
+    "client": "CLIENTE",
+    "driver": "MOTORISTA",
+    "admin": "ADMIN",
+    "membership": "MEMBRO",
+    "membershipLevel": "Premium Platinum"
+  },
+  "admin": {
+    "title": "Dashboard",
+    "titleHighlight": "Operacional",
+    "configuration": "CONFIGURAÇÃO",
+    "stats": {
+      "tripsToday": "VIAGENS HOJE",
+      "projectedRevenue": "RECEITA PROJ.",
+      "cancellations": "CANCELAMENTOS",
+      "drivers": "MOTORISTAS"
+    },
+    "monitoring": {
+      "title": "MONITORAMENTO DE RESERVAS",
+      "tableHeaders": {
+        "id": "ID",
+        "client": "CLIENTE",
+        "route": "ROTA",
+        "status": "STATUS",
+        "driver": "MOTORISTA"
+      },
+      "statuses": {
+        "en_route": "em rota",
+        "pending": "pendente",
+        "confirmed": "confirmado"
+      }
+    },
+    "rules": {
+      "title": "CONFIGURAÇÃO DE REGRAS",
+      "waitPolicy": "POLÍTICA DE ESPERA",
+      "courtesy": "Cortesia (min)",
+      "waitRate": "Taxa de espera (USD/h)",
+      "exchangeRate": "TAXA DE CÂMBIO (USD)",
+      "brl": "BRL Real",
+      "ars": "ARS Peso",
+      "updateButton": "ATUALIZAR REGRAS"
+    }
+  },
+  "driver": {
+    "title": "Painel do",
+    "titleHighlight": "Motorista",
+    "welcome": "Bem-vindo novamente, Cristiano.",
+    "status": "STATUS: ONLINE",
+    "stats": {
+      "earnings": "GANHOS HOJE",
+      "rating": "AVALIAÇÃO",
+      "trips": "VIAGENS HOJE",
+      "activeTime": "TEMPO ATIVO",
+      "ratingDetail": "Top 5% da frota",
+      "completedTrips": "2 concluídas",
+      "sla": "SLA 98%",
+      "vsYesterday": "+12% vs ontem"
+    },
+    "availableTrips": {
+      "title": "VIAGENS DISPONÍVEIS",
+      "passengers": "Passageiros",
+      "yourEarnings": "SEUS GANHOS",
+      "acceptButton": "ACEITAR"
+    },
+    "history": {
+      "title": "HISTÓRICO RECENTE",
+      "completed": "Viagem Concluída",
+      "viewAll": "VER TODO O HISTÓRICO"
+    }
+  },
+  "activeTrip": {
+    "title": "Sua",
+    "titleHighlight": "Viagem Ativa",
+    "status": "A CAMINHO",
+    "hotel": "HOTEL IPANEMA",
+    "driver": "MOTORISTA",
+    "eta": "ETA",
+    "etaValue": "12 MINUTOS",
+    "next": "PRÓXIMO",
+    "nextLocation": "AV. ATLÂNTICA",
+    "assignedDriver": "MOTORISTA DESIGNADO",
+    "vehicle": "VEÍCULO",
+    "plate": "PLACA:",
+    "call": "LIGAR",
+    "whatsapp": "WHATSAPP",
+    "paymentDetails": "DETALHES DO PAGAMENTO",
+    "tripTotal": "Total da viagem",
+    "depositPaid": "Depósito pago",
+    "pendingBalance": "SALDO PENDENTE"
+  },
+  "booking": {
+    "planYourTrip": "Planeje seu",
+    "planYourTripHighlight": "Transfer",
+    "step1": {
+      "origin": "ORIGEM (Aeroporto, Hotel, Porto, etc.)",
+      "originPlaceholder": "Ex: Aeroporto Galeão (GIG)",
+      "destination": "DESTINO (Qualquer ponto B)",
+      "destinationPlaceholder": "Ex: Hotel Copacabana Palace",
+      "date": "DATA",
+      "time": "HORA",
+      "passengers": "PASSAGEIROS",
+      "baggage": "BAGAGEM",
+      "nextButton": "PRÓXIMO: ESCOLHER VEÍCULO"
+    },
+    "step2": {
+      "back": "VOLTAR",
+      "chooseCategory": "Escolha sua",
+      "chooseCategoryHighlight": "Categoria",
+      "nextButton": "PRÓXIMO: PAGAMENTO E CONFIRMAÇÃO"
+    },
+    "step3": {
+      "back": "VOLTAR",
+      "reviewBooking": "Revise sua",
+      "reviewBookingHighlight": "Reserva",
+      "trip": "VIAGEM",
+      "date": "DATA",
+      "vehicle": "VEÍCULO",
+      "totalPrice": "Preço total",
+      "payNow": "PAGUE AGORA (50%)",
+      "balanceAtDestination": "SALDO NO DESTINO",
+      "confirmButton": "CONFIRMAR E PAGAR VIA WHATSAPP",
+      "disclaimer": "Ao confirmar, você será redirecionado para o WhatsApp para concluir o pagamento através de um link do MercadoPago.\nCancelamento gratuito até 7 dias antes."
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "landing": {
+    "badge": "PRIVATE TRANSFER · BRAZIL",
+    "hero": {
+      "title": "From any point",
+      "titleHighlight": "to any destination.",
+      "description": "No surprises. Book in advance, real-time tracking and professional drivers.\nPay 50% when booking and the rest upon arrival.",
+      "buttonBooking": "BOOK TRANSFER",
+      "buttonPackages": "VIEW PACKAGES"
+    },
+    "features": {
+      "certainty": {
+        "title": "Total Certainty",
+        "description": "Know who's coming and when."
+      },
+      "tracking": {
+        "title": "Real-time Tracking",
+        "description": "Follow your trip from our app."
+      },
+      "payment": {
+        "title": "Flexible Payment",
+        "description": "50% upfront / 50% at destination."
+      },
+      "whatsapp": {
+        "title": "WhatsApp Centric",
+        "description": "Notifications every step of the way."
+      }
+    },
+    "packages": {
+      "title": "Exclusive",
+      "titleHighlight": "Packages",
+      "description": "Curated experiences for your next destination."
+    }
+  },
+  "navbar": {
+    "client": "CLIENT",
+    "driver": "DRIVER",
+    "admin": "ADMIN",
+    "membership": "MEMBERSHIP",
+    "membershipLevel": "Premium Platinum"
+  },
+  "admin": {
+    "title": "Operational",
+    "titleHighlight": "Dashboard",
+    "configuration": "CONFIGURATION",
+    "stats": {
+      "tripsToday": "TRIPS TODAY",
+      "projectedRevenue": "PROJ. REVENUE",
+      "cancellations": "CANCELLATIONS",
+      "drivers": "DRIVERS"
+    },
+    "monitoring": {
+      "title": "BOOKING MONITORING",
+      "tableHeaders": {
+        "id": "ID",
+        "client": "CLIENT",
+        "route": "ROUTE",
+        "status": "STATUS",
+        "driver": "DRIVER"
+      },
+      "statuses": {
+        "en_route": "en route",
+        "pending": "pending",
+        "confirmed": "confirmed"
+      }
+    },
+    "rules": {
+      "title": "RULES CONFIGURATION",
+      "waitPolicy": "WAIT POLICY",
+      "courtesy": "Courtesy (min)",
+      "waitRate": "Wait rate (USD/h)",
+      "exchangeRate": "EXCHANGE RATE (USD)",
+      "brl": "BRL Real",
+      "ars": "ARS Peso",
+      "updateButton": "UPDATE RULES"
+    }
+  },
+  "driver": {
+    "title": "Driver",
+    "titleHighlight": "Panel",
+    "welcome": "Welcome back, Cristiano.",
+    "status": "STATUS: ONLINE",
+    "stats": {
+      "earnings": "TODAY'S EARNINGS",
+      "rating": "RATING",
+      "trips": "TRIPS TODAY",
+      "activeTime": "ACTIVE TIME",
+      "ratingDetail": "Top 5% fleet",
+      "completedTrips": "2 completed",
+      "sla": "SLA 98%",
+      "vsYesterday": "+12% vs yesterday"
+    },
+    "availableTrips": {
+      "title": "AVAILABLE TRIPS",
+      "passengers": "Passengers",
+      "yourEarnings": "YOUR EARNINGS",
+      "acceptButton": "ACCEPT"
+    },
+    "history": {
+      "title": "RECENT HISTORY",
+      "completed": "Trip Completed",
+      "viewAll": "VIEW ALL HISTORY"
+    }
+  },
+  "activeTrip": {
+    "title": "Your",
+    "titleHighlight": "Active Trip",
+    "status": "ON THE WAY",
+    "hotel": "IPANEMA HOTEL",
+    "driver": "DRIVER",
+    "eta": "ETA",
+    "etaValue": "12 MINUTES",
+    "next": "NEXT",
+    "nextLocation": "AV. ATLANTICA",
+    "assignedDriver": "ASSIGNED DRIVER",
+    "vehicle": "VEHICLE",
+    "plate": "PLATE:",
+    "call": "CALL",
+    "whatsapp": "WHATSAPP",
+    "paymentDetails": "PAYMENT DETAILS",
+    "tripTotal": "Trip total",
+    "depositPaid": "Deposit paid",
+    "pendingBalance": "PENDING BALANCE"
+  },
+  "booking": {
+    "planYourTrip": "Plan your",
+    "planYourTripHighlight": "Transfer",
+    "step1": {
+      "origin": "ORIGIN (Airport, Hotel, Port, etc.)",
+      "originPlaceholder": "Ex: Galeão Airport (GIG)",
+      "destination": "DESTINATION (Any point B)",
+      "destinationPlaceholder": "Ex: Copacabana Palace Hotel",
+      "date": "DATE",
+      "time": "TIME",
+      "passengers": "PASSENGERS",
+      "baggage": "BAGGAGE",
+      "nextButton": "NEXT: CHOOSE VEHICLE"
+    },
+    "step2": {
+      "back": "BACK",
+      "chooseCategory": "Choose your",
+      "chooseCategoryHighlight": "Category",
+      "nextButton": "NEXT: PAYMENT AND CONFIRMATION"
+    },
+    "step3": {
+      "back": "BACK",
+      "reviewBooking": "Review your",
+      "reviewBookingHighlight": "Booking",
+      "trip": "TRIP",
+      "date": "DATE",
+      "vehicle": "VEHICLE",
+      "totalPrice": "Total price",
+      "payNow": "PAY NOW (50%)",
+      "balanceAtDestination": "BALANCE AT DESTINATION",
+      "confirmButton": "CONFIRM AND PAY VIA WHATSAPP",
+      "disclaimer": "When confirming, you will be redirected to WhatsApp to complete payment via a MercadoPago link.\nFree cancellation up to 7 days before."
+    }
+  }
+}
