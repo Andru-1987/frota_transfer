@@ -27,9 +27,34 @@
       }
     },
     "packages": {
-      "title": "Pacotes",
-      "titleHighlight": "Exclusivos",
-      "description": "Experiências curadas para seu próximo destino."
+      "title": "Destinos",
+      "description": "Viaje confortavelmente até seu próximo destino."
+    },
+    "destinations": {
+      "rio": {
+        "name": "Rio",
+        "description": "Viajando confortavelmente até seu destino no Rio."
+      },
+      "floripa": {
+        "name": "Floripa",
+        "description": "Viajando confortavelmente até seu destino em Floripa."
+      },
+      "buzios": {
+        "name": "Búzios",
+        "description": "Viajando confortavelmente até seu destino em Búzios."
+      },
+      "saoPaulo": {
+        "name": "São Paulo",
+        "description": "Viajando confortavelmente até seu destino em São Paulo."
+      },
+      "salvador": {
+        "name": "Salvador",
+        "description": "Viajando confortavelmente até seu destino em Salvador."
+      },
+      "natal": {
+        "name": "Natal",
+        "description": "Viajando confortavelmente até seu destino em Natal."
+      }
     }
   },
   "navbar": {

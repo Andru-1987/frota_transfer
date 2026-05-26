@@ -27,9 +27,34 @@
       }
     },
     "packages": {
-      "title": "Packages",
-      "titleHighlight": "Exclusivos",
-      "description": "Experiencias curadas para tu próximo destino."
+      "title": "Destinos",
+      "description": "Viajá cómodo a tu próximo destino."
+    },
+    "destinations": {
+      "rio": {
+        "name": "Rio",
+        "description": "Viajando cómodo hasta tu destino en Rio."
+      },
+      "floripa": {
+        "name": "Floripa",
+        "description": "Viajando cómodo hasta tu destino en Floripa."
+      },
+      "buzios": {
+        "name": "Buzios",
+        "description": "Viajando cómodo hasta tu destino en Buzios."
+      },
+      "saoPaulo": {
+        "name": "Sao Paulo",
+        "description": "Viajando cómodo hasta tu destino en Sao Paulo."
+      },
+      "salvador": {
+        "name": "Salvador",
+        "description": "Viajando cómodo hasta tu destino en Salvador."
+      },
+      "natal": {
+        "name": "Natal",
+        "description": "Viajando cómodo hasta tu destino en Natal."
+      }
     }
   },
   "navbar": {

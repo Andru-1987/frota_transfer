@@ -12,18 +12,18 @@ import {
   ArrowRight,
 } from 'lucide-react';
 
-const MOCK_PACKAGES = [
-  { id: 1, name: 'Rio All-In', tag: 'MÁS VENDIDO', price: 320, description: 'Transfer GIG + 2 noches Ipanema + transfer regreso.', color: 'from-blue-600/20 to-gold/20' },
-  { id: 2, name: 'Floripa Paradise', tag: 'ESCAPADA', price: 450, description: 'Transfer Aeropuerto + 3 noches en Resort + Paseo de Barco.', color: 'from-green-600/20 to-gold/20' },
-  { id: 3, name: 'Nightlife Buzios', tag: 'GRUPOS', price: 180, description: 'Van exclusiva para el grupo. SDU -> Buzios + Conductor por la noche.', color: 'from-purple-600/20 to-gold/20' },
-  { id: 4, name: 'Sao Paulo Business', tag: 'CORPORATIVO', price: 250, description: 'Traslados rápidos entre Congonhas y Centros Empresariales.', color: 'from-slate-600/20 to-gold/20' },
-  { id: 5, name: 'Salvador Cultural', tag: 'HISTÓRICO', price: 210, description: 'Transfer Aeropuerto + Tour guiado por el Pelourinho.', color: 'from-orange-600/20 to-gold/20' },
-  { id: 6, name: 'Natal Dunes', tag: 'AVENTURA', price: 380, description: 'Transfer + Buggy tour por las dunas de Genipabu.', color: 'from-yellow-600/20 to-gold/20' },
-];
-
 const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
   const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const DESTINATIONS = [
+    { id: 1, nameKey: 'landing.destinations.rio.name', descKey: 'landing.destinations.rio.description', price: 320, color: 'from-blue-600/20 to-gold/20' },
+    { id: 2, nameKey: 'landing.destinations.floripa.name', descKey: 'landing.destinations.floripa.description', price: 450, color: 'from-green-600/20 to-gold/20' },
+    { id: 3, nameKey: 'landing.destinations.buzios.name', descKey: 'landing.destinations.buzios.description', price: 180, color: 'from-purple-600/20 to-gold/20' },
+    { id: 4, nameKey: 'landing.destinations.saoPaulo.name', descKey: 'landing.destinations.saoPaulo.description', price: 250, color: 'from-slate-600/20 to-gold/20' },
+    { id: 5, nameKey: 'landing.destinations.salvador.name', descKey: 'landing.destinations.salvador.description', price: 210, color: 'from-orange-600/20 to-gold/20' },
+    { id: 6, nameKey: 'landing.destinations.natal.name', descKey: 'landing.destinations.natal.description', price: 380, color: 'from-yellow-600/20 to-gold/20' },
+  ];
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -109,11 +109,11 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
         </div>
       </section>
 
-      {/* Packages Section */}
+      {/* Destinations Section */}
       <section className="w-full max-w-7xl px-6 py-24">
         <div className="flex items-center justify-between mb-12">
           <div>
-           <h2 className="text-4xl font-serif">Packages <span className="italic text-gold">{t('landing.packages.titleHighlight')}</span></h2>
+            <h2 className="text-4xl font-serif">{t('landing.packages.title')}</h2>
              <p className="text-cream/40 text-sm mt-2">{t('landing.packages.description')}</p>
           </div>
           <div className="flex gap-4">
@@ -137,20 +137,19 @@ const Landing = ({ onStartBooking }: { onStartBooking: () => void }) => {
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {MOCK_PACKAGES.map((pkg) => (
+          {DESTINATIONS.map((dest) => (
             <div
-              key={pkg.id}
-              className={`min-w-[300px] md:min-w-[400px] snap-start p-10 rounded-[2.5rem] border border-white/5 bg-gradient-to-br ${pkg.color} flex flex-col justify-between h-[450px] hover:border-gold/30 transition-all cursor-pointer group`}
+              key={dest.id}
+              className={`min-w-[300px] md:min-w-[400px] snap-start p-10 rounded-[2.5rem] border border-white/5 bg-gradient-to-br ${dest.color} flex flex-col justify-between h-[450px] hover:border-gold/30 transition-all cursor-pointer group`}
             >
               <div>
-                <span className="text-[10px] font-bold tracking-widest text-gold mb-4 block">{pkg.tag}</span>
-                <h3 className="text-3xl font-serif mb-4 leading-tight">{pkg.name}</h3>
-                <p className="text-cream/50 font-light leading-relaxed">{pkg.description}</p>
+                <h3 className="text-3xl font-serif mb-4 leading-tight">{t(dest.nameKey)}</h3>
+                <p className="text-cream/50 font-light leading-relaxed">{t(dest.descKey)}</p>
               </div>
               <div className="flex items-end justify-between">
                 <div>
                   <span className="text-xs text-cream/30 block">DESDE</span>
-                  <span className="text-4xl font-serif text-gold">USD {pkg.price}</span>
+                  <span className="text-4xl font-serif text-gold">USD {dest.price}</span>
                 </div>
                 <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-gold group-hover:border-gold group-hover:text-dark transition-all">
                   <ArrowRight size={24} />
